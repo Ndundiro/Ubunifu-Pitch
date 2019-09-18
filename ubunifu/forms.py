@@ -49,7 +49,7 @@ class UpdateAccountForm(FlaskForm):
 
     email = StringField("email", validators=[Email(),DataRequired()])
 
-   
+    picture = FileField('Update Profile Picture', validators=[FileAllowed(['jpg','png'])])
 
     password = PasswordField("password" ,validators=[DataRequired()])
     confirm_password = PasswordField("Confirm Password",validators=[DataRequired(),EqualTo("password")])
@@ -57,5 +57,28 @@ class UpdateAccountForm(FlaskForm):
     submit = SubmitField("Update")
 
     
+
+
+# ...................Custom Validation for username..............
+
+    def validate_username(self, username):
+        if username.data != current_user.username:
+            user = User.query.filter_by(username=username.data).first()
+            if user:
+                raise ValidationError('That username is taken,please choose another username')
+
+# .....................custom validation for email...............
+
+    def validate_email(self, email):
+        if email.data != current_user.email:
+            user = User.query.filter_by(email=username.data).first()
+            if user:
+                raise ValidationError('That email is taken,please choose another username')
+
+
+class PostForm(FlaskForm):
+    title = StringField('Title', validators=[DataRequired()])
+    content = TextAreaField('Content', validators=[DataRequired()])
+    submit = SubmitField('Post')
 
 

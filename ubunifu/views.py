@@ -11,9 +11,8 @@ from flask_login import login_user,current_user,login_required,logout_user
 @app.route("/")
 @app.route("/home")
 def index():
-    # title = "Ubunifu;the creatives haven"
     posts = Post.query.all()
-    return render_template('index.html', posts=posts )     #title='title'
+    return render_template('index.html', posts=posts[::-1] )    
 
 
 # ----------------------------REGISTER ROUTE-------------------------
