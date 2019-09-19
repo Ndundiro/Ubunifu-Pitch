@@ -112,13 +112,10 @@ def new_post():
 
 # TemplateSyntaxError: expected token ',', got 'post_id'
 
-# @app.route("/post/<int:post_id>/update")
-@app.route("/post/<int:post_id>/update", methods=['GET', 'POST'])
+@app.route("/post/<int:post_id>")
 def post(post_id):
     post = Post.query.get_or_404(post_id)
     return render_template('post.html',title=post.title, post=post)
-
-
 
 # ValueError: malformed url rule: '/post/<int:post_id/update>'..........FIND error
 
@@ -143,7 +140,7 @@ def update_post(post_id):
 
 
 
-@app.route("/post/<int:post_id>/delete", methods=['POST'])
+@app.route("/post/<int:post_id>/delete", methods=['GET','POST'])
 @login_required
 def delete_post(post_id):
     post = Post.query.get_or_404(post_id)
