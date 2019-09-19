@@ -10,7 +10,7 @@ Ubunifu-Pitch is a flask web app that allows users to submit their one minute pi
 
 # Screenshot
 
-<img src="https://github.com/Ndundiro/News-H/blob/master/app/static/css/News-Highlight.png" width="1000">
+<img src="https://github.com/Ndundiro/Ubunifu-Pitch/blob/master/screenshot.png" width="1000">
 
 # User Story
 
