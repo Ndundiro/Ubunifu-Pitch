@@ -16,31 +16,39 @@ Ubunifu-Pitch is a flask web app that allows users to submit their one minute pi
 
 * View different posts by users.To comment,upvote/downvote or pitch,users have to sign up.
 * Register in to the app.Credentials required are username,email and password.
-* Use the created credentials to log in to the app.
-* Comment on the different pitches posted py other uses.
-* Vote on s pitch they have viwed by giving it a upvote or a downvote.
+* Log in to the app using  the created credentials during signup.
+* Comment on the different pitches posted.
+* Vote on a pitch they have viwed by giving it a like or a dislike.
+* Post a pitch by clicking the new post button.
+* Update user profile by clicking on Account.
 
-View pitches from the different categories.
-Submit a pitch to a specific category of their choice.
 
-# Installations
+# SetUp/Installations
+
+1. Cloning the repository:
+
+https://github.com/Ndundiro/Ubunifu-Pitch.git
+
 Navigate to the project folder
 cd ubunifu.
 
-Creating a virtual environment
-virtualenv virtual.
+2. Access the project  folder and install requirements
+* cd Ubunifu-Pitch
+* pip install -r requirements.txt
 
-Activating the virtual environment
-source virtual/bin/activate.
-
-Running the application
+3. Run the application
 python3 run.py 
 
-# SetUp
+# Technology used
+* Python3.6
+* Flask
+* Heroku
 
 
 # Known Bugs
-The upvote functionality does not work as expected.
+* The categories functionality does not work as expected.
+* There is no comment section
+* The upvote functionality does not work as expected.
 
 # Support and Contact Details
 For any comments,suggestions,feedback or inquiries, contact me via email: ndundirokamau@gmail.com
