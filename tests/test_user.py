@@ -19,3 +19,6 @@ class UserModelTest(unittest.TestCase):
   def test_save_user(self):
       self.new_user.save_user()
       self.assertTrue(len(User.query.all())>0)
+
+gitif __name__ == "__main__":
+    app.run(debug=True)
